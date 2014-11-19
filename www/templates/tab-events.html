@@ -1,0 +1,9 @@
+<ion-view title="Spiel">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="event in vm.events" type="item-text-wrap" href="#/tab/event/{{event.id}}">
+        {{event.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
