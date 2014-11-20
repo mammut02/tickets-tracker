@@ -16,24 +16,15 @@
         var ref = new Firebase(FIREBASE_URL);
         var list = $firebase(ref.child('events')).$asArray();
 
-        list.$watch(function (event) {
-            console.log(event);
-        });
-
-        list.$loaded()
-            .then(function (theList) {
-                console.log('Events loaded');
-            })
-            .catch(function (error) {
-                console.log("Error:", error);
-            });
-
         var Events = {
-            all: list
+            all: list,
+            track: track
         };
 
         return Events;
 
-
+        function track(event) {
+            $firebase(ref.child('events').child(event.$id)).$update({tracked: event.tracked});
+        }
     }
 })();

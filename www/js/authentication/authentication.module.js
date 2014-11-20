@@ -15,5 +15,5 @@
         .module('ticketstracker.authentication.controllers', []);
 
     angular
-        .module('ticketstracker.authentication.services', ['ngCookies']);
+        .module('ticketstracker.authentication.services', []);
 })();

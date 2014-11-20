@@ -8,7 +8,8 @@
             'ionic',
             'ticketstracker.routes',
             'ticketstracker.config',
-            'ticketstracker.events'
+            'ticketstracker.events',
+            'ticketstracker.authentication'
         ]);
 
     angular
@@ -20,7 +21,7 @@
     angular
         .module('ticketstracker')
         .run(run)
-        .constant('FIREBASE_URL', 'YOUR-FIREBASE-URL');
+        .constant('FIREBASE_URL', 'https://fcb.firebaseio.com/');
 
     run.$inject = ['$ionicPlatform'];
 

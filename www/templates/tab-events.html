@@ -1,9 +1,7 @@
 <ion-view title="Spiel">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="event in vm.events" type="item-text-wrap" href="#/tab/event/{{event.id}}">
-        {{event.name}}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+    <ion-content>
+        <ion-list>
+            <ion-checkbox ng-repeat="event in vm.events" ng-model="event.tracked" ng-change="vm.change(event)">{{event.name | teamname}}</ion-checkbox>
+        </ion-list>
+    </ion-content>
 </ion-view>

@@ -8,7 +8,8 @@
     angular
         .module('ticketstracker.events', [
             'ticketstracker.events.controllers',
-            'ticketstracker.events.services'
+            'ticketstracker.events.services',
+            'ticketstracker.events.filters'
         ]);
 
     angular
@@ -16,4 +17,7 @@
 
     angular
         .module('ticketstracker.events.services', ['firebase']);
+
+    angular
+        .module('ticketstracker.events.filters', []);
 })();

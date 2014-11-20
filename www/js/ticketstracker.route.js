@@ -28,7 +28,7 @@
                 views: {
                     'tab-events': {
                         templateUrl: 'templates/tab-events.html',
-                        controller: 'EventsController as vm',
+                        controller: 'EventsController as vm'
                     }
                 }
             });
