@@ -1,7 +1,7 @@
 <ion-view title="Spiel">
     <ion-content>
         <ion-list>
-            <ion-checkbox ng-repeat="event in vm.events" ng-model="event.tracked" ng-change="vm.change(event)">{{event.name | teamname}}</ion-checkbox>
+            <ion-toggle ng-repeat="event in vm.events" ng-model="event.tracked" ng-change="vm.change(event)">{{event.name | teamname}}</ion-toggle>
         </ion-list>
     </ion-content>
 </ion-view>
